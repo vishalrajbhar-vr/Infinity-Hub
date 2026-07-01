@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+
+/* Add in src/index.css */
+
+/* SIDEBAR MENU */
+
+.custom-sidebar-menu {
+    background: transparent !important;
+    border-inline-end: none !important;
+}
+
+.custom-sidebar-menu .ant-menu-item {
+    height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 16px !important;
+    color: #d4d4d8 !important;
+    margin-bottom: 10px !important;
+    font-weight: 500 !important;
+}
+
+.custom-sidebar-menu .ant-menu-item .ant-menu-title-content {
+    font-size: 15px !important;
+}
+
+.custom-sidebar-menu .ant-menu-item .ant-menu-item-icon {
+    font-size: 16px !important;
+}
+
+.custom-sidebar-menu .ant-menu-item:hover {
+    background: #18181b !important;
+    color: #facc15 !important;
+}
+
+.custom-sidebar-menu .ant-menu-item-selected {
+    background: #facc15 !important;
+    color: black !important;
+}
+
+.custom-sidebar-menu .ant-menu-item-selected .ant-menu-item-icon {
+    color: black !important;
+}
+
+.custom-sidebar-menu .ant-menu-item::after {
+    display: none !important;
+}
