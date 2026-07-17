@@ -7,7 +7,6 @@ import cors from 'cors';
 import BlogModel from './models/blog.model.js';
 import StudentModel from './models/student.model.js';
 import ProductModel from './models/product.model.js';
-import { deleteProduct } from '../frontend/src/service/product.js';
 import TeacherModel from './models/teacher.model.js';
 import CategoryModel from './models/category.model.js';
 
@@ -32,7 +31,7 @@ const connectDB = async () => {
     try {
 
         await mongoose.connect(
-            'mongodb://localhost:27017/blogify'
+            'mongodb+srv://vishalrajbharvr01_db_user:Rmj7BQv8ndtLoZqn@infinityhub.m7tmykd.mongodb.net/infinity'
         );
 
         console.log("MongoDB connected 🥳");
@@ -467,34 +466,28 @@ app.get('/allproduct', async (req, res) => {
 
 // ----- DELETE product -----
 app.delete('/deleteproduct/:id', async (req, res) => {
-
     try {
-
-        const deletedproduct =
-            await ProductModel.findByIdAndDelete(
-                req.params.id
-            );
+        const deletedproduct = await ProductModel.findByIdAndDelete(req.params.id);
 
         if (!deletedproduct) {
             return res.status(404).json({
                 success: false,
-                message: "product Not Found"
+                message: "Product Not Found"
             });
         }
 
         res.status(200).json({
             success: true,
-            message: "product Deleted Successfully",
-            deleteProduct
+            message: "Product Deleted Successfully",
+            deletedproduct
         });
 
     } catch (error) {
-
         console.log(error);
 
         res.status(500).json({
             success: false,
-            message: "Delete product API Error",
+            message: "Delete Product API Error",
             error
         });
     }
