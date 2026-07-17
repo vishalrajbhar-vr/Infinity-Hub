@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const addTeacher = async (data) => {
     const response = await axios.post(
-        "http://localhost:3000/addteacher",
+        "https://infinity-hub-4.onrender.com/addteacher",
         data
     );
 
@@ -14,7 +14,7 @@ export const addTeacher = async (data) => {
 
 export const getAllteacher = async () => {
     const response = await axios.get(
-        "http://localhost:3000/allteacher"
+        "https://infinity-hub-4.onrender.com/allteacher"
     );
 
     return response;
@@ -24,7 +24,7 @@ export const getAllteacher = async () => {
 export const deleteTeacher = async (id) => {
 
     const response = await axios.delete(
-        `http://localhost:3000/deleteteacher/${id}`
+        `https://infinity-hub-4.onrender.com/deleteteacher/${id}`
     );
 
     return response;
