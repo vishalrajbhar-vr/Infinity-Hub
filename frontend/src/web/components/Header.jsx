@@ -70,7 +70,7 @@ const Header = () => {
                 {/* Button */}
                 <button className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-5 py-2 rounded-xl transition">
 
-                    <Link to="admin/dashboard">
+                    <Link to="#">
                         Admin
                     </Link>
                 </button>
