@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export const addBlog = async (data) => {
-    let response = await axios.post('http://localhost:3000/addblog', data)
+    let response = await axios.post('https://infinity-hub-4.onrender.com/addblog', data)
     return response;
 }
 
