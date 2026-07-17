@@ -48,7 +48,7 @@ connectDB();
 
 // ----- HOME ROUTE -----
 app.get('/', (req, res) => {
-    res.send('Welcome to Blogify');
+    res.send('Welcome to Infinity Hub');
 });
 
 
