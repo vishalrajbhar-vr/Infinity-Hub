@@ -23,7 +23,7 @@ function BlogDetailesPage() {
         try {
 
             const res = await axios.get(
-                `http://localhost:3000/singleblog/${id}`
+                `https://infinity-hub-4.onrender.com/singleblog/${id}`
             );
 
             console.log(res.data);
