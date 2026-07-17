@@ -4,10 +4,7 @@ import React, {
 } from "react";
 
 import { useParams } from "react-router";
-
-
 import Footer from "../components/Footer";
-
 import axios from "axios";
 import Header from "../components/Header";
 
@@ -19,19 +16,15 @@ function BlogDetailesPage() {
 
     // FETCH SINGLE BLOG
     const fetchSingleBlog = async () => {
-
         try {
-
             const res = await axios.get(
                 `https://infinity-hub-4.onrender.com/singleblog/${id}`
             );
 
             console.log(res.data);
-
             setBlog(res.data.singleBlog);
 
         } catch (error) {
-
             console.log(error);
         }
     };
@@ -42,7 +35,7 @@ function BlogDetailesPage() {
 
     return (
         <>
-            <Header/>
+            <Header />
 
             <section className="bg-black min-h-screen text-white py-16">
 
