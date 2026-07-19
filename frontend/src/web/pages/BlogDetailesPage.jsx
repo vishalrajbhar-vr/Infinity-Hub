@@ -18,7 +18,7 @@ function BlogDetailesPage() {
     const fetchSingleBlog = async () => {
         try {
             const res = await axios.get(
-                `https://infinity-hub-2.onrender.com/singleblog/${id}`
+                `https://infinity-hub-2.onrender.com/viewblog/${id}`
             );
 
             console.log(res.data);
