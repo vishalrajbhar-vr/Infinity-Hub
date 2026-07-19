@@ -21,7 +21,7 @@ function ViewBlogPage() {
         try {
 
             const res = await axios.get(
-                `https://infinity-hub-4.onrender.com/viewblog/${id}`
+                `https://infinity-hub-2.onrender.com/viewblog/${id}`
             );
 
             console.log(res.data);
