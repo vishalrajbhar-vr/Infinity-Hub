@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const addStudent = async (data) => {
     const response = await axios.post(
-        "https://infinity-hub-4.onrender.com/addstudent",
+        "https://infinity-hub-2.onrender.com/addstudent",
         data
     );
 
@@ -13,7 +13,7 @@ export const addStudent = async (data) => {
 
 export const getAllStudents = async () => {
     const response = await axios.get(
-        "https://infinity-hub-4.onrender.com/allstudents"
+        "https://infinity-hub-2.onrender.com/allstudents"
     );
 
     return response;
@@ -22,18 +22,18 @@ export const getAllStudents = async () => {
 export const deleteStudent = async (id) => {
 
     const response = await axios.delete(
-        `https://infinity-hub-4.onrender.com/deletestudents/${id}`
+        `https://infinity-hub-2.onrender.com/deletestudents/${id}`
     );
 
     return response;
 };
 
 export const featchstudent = async(id)=>{
-    const response = await axios.get(`https://infinity-hub-4.onrender.com/getstudentbyid/${id}`);
+    const response = await axios.get(`https://infinity-hub-2.onrender.com/getstudentbyid/${id}`);
     return response;
 };
 
 export const editStudent = async(id, updatedData)=>{
-    const response = await axios.patch(`https://infinity-hub-4.onrender.com/editstudent/${id}`, updatedData  );
+    const response = await axios.patch(`https://infinity-hub-2.onrender.com/editstudent/${id}`, updatedData  );
     return response;
 };
